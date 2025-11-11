@@ -61,46 +61,47 @@ Thông qua hệ thống giúp người dùng nắm bắt được xu hướng ng
 ---
 
 ## 🔧 2. Công nghệ sử dụng  
-- **Ngôn ngữ lập trình:** Java (JDK 8+)  
-- **Giao thức mạng:** TCP Socket (`java.net.Socket`, `java.net.ServerSocket`)  
-- **Xử lý đa luồng:** `Thread` (`java.lang.Thread`)  
-- **Giao diện:** Java Swing (`JFrame`, `JButton`, `JTable`, `JProgressBar`, `JFileChooser`)  
-- **Truyền dữ liệu:** `DataInputStream` và `DataOutputStream`  
+- **Ngôn ngữ lập trình:** 
+- **Fontend:** React, Typescript, VIte 
+- **Xử lý dữ liệu:** `prophet`, Python 
+- **Backend:** Dotket NET 8
 
 📚 **Thư viện sử dụng**  
-- `java.net` – Socket communication  
-- `java.io` – File I/O operations  
-- `javax.swing` – GUI components  
-- `java.awt` – Layout managers & Color  
-- `java.sql` – Database connectivity (JDBC)  
-- `java.text` – Date formatting  
-- `java.util` – Collections & utilities  
+- `pandas`   
+- `prophet` 
+- `react` 
+- `react-dom` 
+- `react-router-dom` 
+- `typescript` 
+- `chart.js`
+- `react-chartjs-2`
+- `fetchData`
 
 🗄️ **Cơ sở dữ liệu**  
-- Hệ quản trị: MySQL  
-- JDBC Driver: `mysql-connector-java`  
-- Schema: `truyen_fileTCP`  
+- Hệ quản trị: SQL Server 
 - Tables:  
-  - `users` – Quản lý người dùng  
-  - `history` – Lịch sử truyền file  
+  - `Users` – Quản lý người dùng  
+  - `Majors` – Danh sách ngành học
+  - `Trend` – Xu hướng ngành học
+  - `Universities` – Danh sách trường học
 
 ---
 
 ## ✨ Tính năng chính  
 
-- Gửi/nhận file giữa các client.  
-- Xác thực người dùng qua database.  
-- Theo dõi tiến trình truyền file real-time.  
-- Lưu trữ lịch sử truyền file với trạng thái.  
+- Tìm kiếm và xem xu hướng các ngàng học để đưa ra lực chọn tốt.  
+- Tham khảo các trường đại học theo ngành để đưa ra lựa chọn.  
+- Phân tích thị trường việc làm theo ngành học theo quí.  
+- Dự báo xu hướng top ngành học hot.  
 - Giao diện quản lý trực quan.  
 
 ---
 
 ## 🖥️ Công cụ & Môi trường phát triển  
 
-- Công cụ phát triển: **Eclipse IDE / IntelliJ IDEA**  
-- Phiên bản JDK: **Java SE 8+ (khuyến nghị Java 11+)**  
-- Database: **MySQL 5.7+ hoặc 8.0+**  
+- Công cụ phát triển: **Visual Studio Code**  
+- Phiên bản JDK: **Dotket NET 8+ (khuyến nghị NET 9+)**  
+- Database: **SQL Server Management Studio 19**  
 - Hệ điều hành: **Windows 10/11** (đa nền tảng: Linux, macOS)  
 
 ---

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("apixh")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ff76782d35d0bfad7b44aad0d1125cc094adb351")]
 [assembly: System.Reflection.AssemblyProductAttribute("apixh")]
 [assembly: System.Reflection.AssemblyTitleAttribute("apixh")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

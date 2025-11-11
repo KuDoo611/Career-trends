@@ -568,7 +568,7 @@ export default function Majors() {
         <header style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
           <button
             type="button"
-            onClick={() => navigate(-1)}
+            onClick={() => navigate("/admin/HomeAdmin")}
             style={{
               alignSelf: "flex-start",
               display: "flex",
@@ -605,6 +605,7 @@ export default function Majors() {
             </div>
             <button
               type="button"
+              onClick={() => navigate("/admin/majors/create")}
               style={{
                 padding: "12px 20px",
                 borderRadius: 14,

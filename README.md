@@ -64,7 +64,7 @@ Thông qua hệ thống giúp người dùng nắm bắt được xu hướng ng
 - **Ngôn ngữ lập trình:** 
 - **Fontend:** React, Typescript, VIte 
 - **Xử lý dữ liệu:** `prophet`, Python 
-- **Backend:** Dotket NET 8
+- **Backend:** Dotnet NET 8
 
 📚 **Thư viện sử dụng**  
 - `pandas`   
@@ -100,7 +100,7 @@ Thông qua hệ thống giúp người dùng nắm bắt được xu hướng ng
 ## 🖥️ Công cụ & Môi trường phát triển  
 
 - Công cụ phát triển: **Visual Studio Code**  
-- Phiên bản JDK: **Dotket NET 8+ (khuyến nghị NET 9+)**  
+- Phiên bản JDK: **Dotnet NET 8+ (khuyến nghị NET 9+)**  
 - Database: **SQL Server Management Studio 19**  
 - Hệ điều hành: **Windows 10/11** (đa nền tảng: Linux, macOS)  
 

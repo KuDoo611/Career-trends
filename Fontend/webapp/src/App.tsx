@@ -5,6 +5,7 @@ import HomePage from "./pages/Users/HomePageUser";
 import Dashboard from "./pages/Users/Dashboard";
 import Universities from "./pages/Users/Universities";
 import Majors from "./pages/Admin/Majors";
+import CreateMajor from "./pages/Admin/CreateMajor";
 import MajorSearch from "./pages/Users/MajorSearch";
 import Profile from "./pages/Users/Profile";
 import Admission from "./pages/Users/Admission";
@@ -40,6 +41,9 @@ export default function App() {
           <Route path="/trend" element={<Trend />} />
           <Route path="/admin/majors" element={
             <RequireAdmin><Majors /></RequireAdmin>
+          } />
+          <Route path="/admin/majors/create" element={
+            <RequireAdmin><CreateMajor /></RequireAdmin>
           } />
           <Route path="/admin/HomeAdmin" element={
             <RequireAdmin><HomeAdmin /></RequireAdmin>

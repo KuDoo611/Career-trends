@@ -5186,11 +5186,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CDS2\\API\\apixh\\apixh.csproj",
+      "projectUniqueName": "D:\\CDS2\\Career-trends\\API\\apixh\\apixh.csproj",
       "projectName": "apixh",
-      "projectPath": "D:\\CDS2\\API\\apixh\\apixh.csproj",
+      "projectPath": "D:\\CDS2\\Career-trends\\API\\apixh\\apixh.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\CDS2\\API\\apixh\\obj\\",
+      "outputPath": "D:\\CDS2\\Career-trends\\API\\apixh\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

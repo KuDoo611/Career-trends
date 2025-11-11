@@ -5,7 +5,7 @@
 </h2>
 
 <h2 align="center">
-   TRUYỀN FILE QUA TCP
+   DỰ ĐOÁN VÀ PHÂN TÍCH XU HƯỚNG NGÀNH HỌC
 </h2>
 
 <div align="center">

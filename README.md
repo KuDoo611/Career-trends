@@ -36,7 +36,7 @@ Thông qua hệ thống giúp người dùng nắm bắt được xu hướng ng
 **Chức năng chính:**
 
 **1.1 Forntend**  
-  **Giao diện người dùng**
+    **Giao diện người dùng**
 - Trang chủ: Giao diện dễ nhìn, đầy đủ nội dung của hệ thống.
 - Trang tìm kiếm ngàng học: Tình kiếm và tìm hiểu về xu hướng của ngành học.
 - Trang xu hướng: Phân tích xu hướng của ngàng học,dự đoán từ 3-5 năm tới.

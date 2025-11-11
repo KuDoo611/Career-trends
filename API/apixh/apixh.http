@@ -1,0 +1,6 @@
+@apixh_HostAddress = http://localhost:5263
+
+GET {{apixh_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

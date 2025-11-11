@@ -105,3 +105,112 @@ Thông qua hệ thống giúp người dùng nắm bắt được xu hướng ng
 - Hệ điều hành: **Windows 10/11** (đa nền tảng: Linux, macOS)  
 
 ---
+
+## 🚀 3. Một số hình ảnh hệ thống  
+
+- **Giao diện Đăng nhập**
+  
+  <p align="center"><img width="428" height="392" alt="image" src="https://github.com/user-attachments/assets/2c479f08-73ee-403a-83d8-b83fa760ea00" /><br/>
+
+  <p align="center"><i>Hình 1: Giao diện Đăng nhập</i>
+</p>
+<br/>
+
+- **Giao diện Đăng ký**
+  
+<p align="center"><img width="429" height="394" alt="image" src="https://github.com/user-attachments/assets/6747bac6-ac32-431c-899b-86efdf8dcc23" /><br/>
+
+  <p align="center"><i>Hình 2: Giao diện Đăng ký</i>
+</p>
+<br/>
+
+- **Giao diện người dùng**
+  
+<img width="881" height="687" alt="image" src="https://github.com/user-attachments/assets/4528a17c-1386-4450-8902-40c0803474a7" /><br/>
+
+
+  <p align="center"><i>Hình 3: Giao diện người dùng</i>
+</p>
+<br/>
+
+- **Giao diện người dùng truyền file**
+  
+<img width="1757" height="688" alt="image" src="https://github.com/user-attachments/assets/9640e776-90cc-4c02-8f48-feedfa072090" /><br/>
+
+
+  <p align="center"><i>Hình 4: Giao diện người dùng truyền file giữa các client và lưu lại thông báo</i>
+</p>
+<br/>
+
+## 📝 4. Các bước cài đặt  
+#### Bước 1: Chuẩn bị môi trường
+1. **Kiểm tra Java**: Mở terminal/command prompt và chạy:
+   ```bash
+   java -version
+   javac -version
+   ```
+   Đảm bảo cả hai lệnh đều hiển thị phiên bản Java 8 trở lên.
+
+2. **Chuẩn bị IDE**: Khởi động Eclipse IDE và chọn workspace là thư mục vừa tạo.
+
+#### Bước 2: Tạo project và cấu trúc
+1. **Tạo Java Project**:
+   - **File** → **New** → **Java Project**
+   - **Project name**: `TCPFileTransfer`
+   - **JRE**: Sử dụng default JRE (*Java 21*)
+   - Bỏ check **"Create module-info.java file"**
+   - Click **Finish**
+
+2. **Tạo cấu trúc package**: Trong thư mục `src`, tạo các package:
+   ```
+   src/
+   ├── server/
+   ├── client/
+   ├── common/
+   └── utils/
+   ```
+   *Cách tạo: Right-click `src` → **New** → **Package** → Nhập tên package → **Finish***
+
+3. **Tạo các file Java**:
+   - `server/TCPFileServer.java` (*với main method*)
+   - `server/ClientHandler.java` (*implement Runnable*)
+   - `client/TCPFileClient.java`
+   - `client/ClientGUI.java` (*extends JFrame, với main method*)
+   - `common/FileInfo.java`
+   - `utils/FileUtils.java`
+
+#### Bước 3: Copy mã nguồn
+1. **Copy source code**: Sao chép nội dung code vào từng file tương ứng đã tạo.
+
+2. **Organize imports**: Sử dụng **Ctrl+Shift+O** để tự động import các thư viện cần thiết.
+
+3. **Kiểm tra lỗi**: Đảm bảo không có lỗi compile trong Project Explorer.
+
+#### Bước 4: Chạy ứng dụng
+
+**Khởi động Server:**
+1. **Right-click** file `TCPFileServer.java`
+2. **Run As** → **Java Application**
+3. Server sẽ khởi động trên port **12345** mặc định
+4. Console hiển thị:
+   ```
+   Server đã khởi động trên port 12345
+   Đang chờ client kết nối...
+   ```
+
+**Khởi động Client:**
+1. **Right-click** file `ClientGUI.java`
+2. **Run As** → **Java Application**  
+3. Giao diện GUI sẽ xuất hiện
+4. Click nút **"Kết Nối"** để kết nối đến Server
+5. Status sẽ chuyển thành **"Đã kết nối"** (*màu xanh*)
+6. Server console sẽ hiển thị: `Client đã kết nối: /127.0.0.1`
+
+---
+
+
+## 📌 5. Liên hệ 
+- **Sinh viên thực hiện:** **Nguyễn Xuân Thuận**
+ - 🌐 Website: [FIT DNU](https://dainam.edu.vn/vi/khoa-cong-nghe-thong-tin)
+ - 📧 Email: [xuanthuan611@gmail.com](mailto:xuanthuan611@gmail.com)
+ - 📱 Fanpage: [AIoTLab - FIT DNU](https://www.facebook.com/DNUAIoTLab)

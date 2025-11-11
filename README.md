@@ -22,3 +22,33 @@
 </div>
 
 ---
+## 📖 1. Giới thiệu  
+
+Hệ thống **Dự đoán và phân tích xu hướng ngành học** là trang website được xây dựng nhằm mô phỏng quá trình phân tích và dự đoán xu hướng ngàng học 1-3 năm để cho người dùng có xem và định hướng ngành học trong tương lai.  
+
+**Mục tiêu chính:**
+- Hiểu rõ cách hoạt động của giao thức TCP trong việc truyền dữ liệu.  
+- Nắm vững cơ chế kết nối Client – Server.  
+- Thực hành xử lý dữ liệu file (upload/download).  
+- Xây dựng giao diện người dùng thân thiện với Java Swing.  
+
+**Chức năng chính:**
+
+**1.1 Client**  
+- Giao diện Đăng nhập, Đăng ký.  
+- Gửi file: Cho phép người dùng chọn file và gửi đến người nhận khác.  
+- Quản lý lịch sử: Xem lịch sử file đã gửi và file đã nhận.  
+
+**1.2 Server**  
+- Lắng nghe kết nối: Chấp nhận kết nối từ client trên cổng `12345`.  
+- Quản lý truyền file: Nhận và lưu trữ file từ client.  
+- Hiển thị thông tin: Thông báo kết nối và lịch sử truyền file.  
+
+**1.3 Database**  
+- Quản lý người dùng: Đăng ký, đăng nhập, kiểm tra user.  
+- Lưu trữ lịch sử: Ghi nhận các lần gửi/nhận file với trạng thái.  
+- Kết nối MySQL qua JDBC.  
+
+---
+
+## 🔧 2. Công nghệ sử dụng  

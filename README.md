@@ -61,4 +61,46 @@ Thông qua hệ thống giúp người dùng nắm bắt được xu hướng ng
 ---
 
 ## 🔧 2. Công nghệ sử dụng  
+- **Ngôn ngữ lập trình:** Java (JDK 8+)  
+- **Giao thức mạng:** TCP Socket (`java.net.Socket`, `java.net.ServerSocket`)  
+- **Xử lý đa luồng:** `Thread` (`java.lang.Thread`)  
+- **Giao diện:** Java Swing (`JFrame`, `JButton`, `JTable`, `JProgressBar`, `JFileChooser`)  
+- **Truyền dữ liệu:** `DataInputStream` và `DataOutputStream`  
 
+📚 **Thư viện sử dụng**  
+- `java.net` – Socket communication  
+- `java.io` – File I/O operations  
+- `javax.swing` – GUI components  
+- `java.awt` – Layout managers & Color  
+- `java.sql` – Database connectivity (JDBC)  
+- `java.text` – Date formatting  
+- `java.util` – Collections & utilities  
+
+🗄️ **Cơ sở dữ liệu**  
+- Hệ quản trị: MySQL  
+- JDBC Driver: `mysql-connector-java`  
+- Schema: `truyen_fileTCP`  
+- Tables:  
+  - `users` – Quản lý người dùng  
+  - `history` – Lịch sử truyền file  
+
+---
+
+## ✨ Tính năng chính  
+
+- Gửi/nhận file giữa các client.  
+- Xác thực người dùng qua database.  
+- Theo dõi tiến trình truyền file real-time.  
+- Lưu trữ lịch sử truyền file với trạng thái.  
+- Giao diện quản lý trực quan.  
+
+---
+
+## 🖥️ Công cụ & Môi trường phát triển  
+
+- Công cụ phát triển: **Eclipse IDE / IntelliJ IDEA**  
+- Phiên bản JDK: **Java SE 8+ (khuyến nghị Java 11+)**  
+- Database: **MySQL 5.7+ hoặc 8.0+**  
+- Hệ điều hành: **Windows 10/11** (đa nền tảng: Linux, macOS)  
+
+---

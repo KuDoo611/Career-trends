@@ -110,7 +110,8 @@ Thông qua hệ thống giúp người dùng nắm bắt được xu hướng ng
 
 - **Giao diện Đăng nhập**
   
-  <p align="center"><img width="428" height="392" alt="image" src="https://github.com/user-attachments/assets/2c479f08-73ee-403a-83d8-b83fa760ea00" /><br/>
+  <p align="center"><img width="536" height="625" alt="image" src="https://github.com/user-attachments/assets/4e95d732-662f-41f1-84b3-ceba2f946b41" /><br/>
+
 
   <p align="center"><i>Hình 1: Giao diện Đăng nhập</i>
 </p>
@@ -118,7 +119,8 @@ Thông qua hệ thống giúp người dùng nắm bắt được xu hướng ng
 
 - **Giao diện Đăng ký**
   
-<p align="center"><img width="429" height="394" alt="image" src="https://github.com/user-attachments/assets/6747bac6-ac32-431c-899b-86efdf8dcc23" /><br/>
+<p align="center"><img width="482" height="600" alt="image" src="https://github.com/user-attachments/assets/0e3e15b3-1043-4175-829e-fe9b513ff0d3" /><br/>
+
 
   <p align="center"><i>Hình 2: Giao diện Đăng ký</i>
 </p>
@@ -126,91 +128,198 @@ Thông qua hệ thống giúp người dùng nắm bắt được xu hướng ng
 
 - **Giao diện người dùng**
   
-<img width="881" height="687" alt="image" src="https://github.com/user-attachments/assets/4528a17c-1386-4450-8902-40c0803474a7" /><br/>
+<img width="1847" height="963" alt="image" src="https://github.com/user-attachments/assets/8be59e1c-6060-49de-ad58-ba0fb6e710f4" /><br/>
 
 
   <p align="center"><i>Hình 3: Giao diện người dùng</i>
 </p>
 <br/>
 
-- **Giao diện người dùng truyền file**
+- **Giao diện trang phân tích xu hướng ngành học**
   
-<img width="1757" height="688" alt="image" src="https://github.com/user-attachments/assets/9640e776-90cc-4c02-8f48-feedfa072090" /><br/>
+<img width="1476" height="898" alt="image" src="https://github.com/user-attachments/assets/ab87b8e3-ae6c-4983-8315-0402d7809868" /><br/>
 
 
-  <p align="center"><i>Hình 4: Giao diện người dùng truyền file giữa các client và lưu lại thông báo</i>
-</p>
-<br/>
+  <p align="center"><i>Hình 4: Giao diện phân tích xu hướng và dự báo từ 3-5 năm tới</i></p><br/>
 
 ## 📝 4. Các bước cài đặt  
 #### Bước 1: Chuẩn bị môi trường
-1. **Kiểm tra Java**: Mở terminal/command prompt và chạy:
-   ```bash
-   java -version
-   javac -version
+1. **Kiểm tra Node.js & npm**: Mở PowerShell và chạy:
+   ```powershell
+   node -v
+   npm -v
    ```
-   Đảm bảo cả hai lệnh đều hiển thị phiên bản Java 8 trở lên.
+   Đảm bảo Node.js >= 16 (hoặc phiên bản phù hợp với `vite`/`package.json`).
 
-2. **Chuẩn bị IDE**: Khởi động Eclipse IDE và chọn workspace là thư mục vừa tạo.
-
-#### Bước 2: Tạo project và cấu trúc
-1. **Tạo Java Project**:
-   - **File** → **New** → **Java Project**
-   - **Project name**: `TCPFileTransfer`
-   - **JRE**: Sử dụng default JRE (*Java 21*)
-   - Bỏ check **"Create module-info.java file"**
-   - Click **Finish**
-
-2. **Tạo cấu trúc package**: Trong thư mục `src`, tạo các package:
+2. **Kiểm tra .NET SDK**: (Backend dùng .NET 8.0 theo project `bin/Debug/net8.0`)
+   ```powershell
+   dotnet --version
    ```
-   src/
-   ├── server/
-   ├── client/
-   ├── common/
-   └── utils/
+   Đảm bảo hiển thị `8.x` hoặc phiên bản tương thích (nếu backend yêu cầu .NET 8).
+
+3. **Kiểm tra Python & pip**: (Model Prophet yêu cầu Python 3.8+)
+   ```powershell
+   python --version
+   python -m pip --version
    ```
-   *Cách tạo: Right-click `src` → **New** → **Package** → Nhập tên package → **Finish***
 
-3. **Tạo các file Java**:
-   - `server/TCPFileServer.java` (*với main method*)
-   - `server/ClientHandler.java` (*implement Runnable*)
-   - `client/TCPFileClient.java`
-   - `client/ClientGUI.java` (*extends JFrame, với main method*)
-   - `common/FileInfo.java`
-   - `utils/FileUtils.java`
+4. **IDE / Editor**: Mở Visual Studio Code hoặc IDE bạn chọn. (Mở thư mục workspace: `d:\CDS2\Career-trends`).
 
+5. **(Windows only)** Nếu cài đặt `prophet` gặp lỗi biên dịch, cần cài thêm Build Tools (Visual C++ Build Tools) hoặc sử dụng `cmdstanpy` theo hướng dẫn của `prophet`.
+
+---
+
+####  Bước 2: Setup và cài dependencies cho từng phần
+Phần A — Frontend (Vite + React + TypeScript)
+
+1. **Chuyển vào thư mục frontend**:
+   ```powershell
+   cd .\Fontend\webapp
+   ```
+
+2. **Cài node modules**:
+   ```powershell
+   npm install
+   ```
+   Hoặc nếu dùng Yarn/PNPM, thay `npm install` bằng `yarn` hoặc `pnpm install`.
+
+3. **Chạy dev server (với Vite)**:
+   ```powershell
+   npm run dev
+   ```
+   Kết quả mong đợi: server Vite sẽ hiển thị URL (mặc định `http://localhost:5173` hoặc port khác). Truy cập trong trình duyệt.
+
+4. **Build production** (nếu cần):
+   ```powershell
+   npm run build
+   npm run preview
+   ```
+
+Lưu ý:
+- Nếu gặp lỗi CORS khi frontend gọi backend, xem file `Fontend/webapp/public/CORS_SETUP_GUIDE.md` hoặc đảm bảo backend cho phép origin của Vite.
+- Kiểm tra `package.json` để biết scripts chính xác (dev/build/preview).
+
+
+Phần B — Backend (.NET API `apixh`)
+
+1. **Chuyển vào thư mục backend** (chứa `apixh.csproj`):
+   ```powershell
+   cd ..\..\API\apixh
+   ```
+
+2. **Restore và build**:
+   ```powershell
+   dotnet restore
+   dotnet build -c Debug
+   ```
+
+3. **Chạy ứng dụng**:
+   ```powershell
+   dotnet run --project .\apixh.csproj
+   ```
+   Kết quả mong đợi: Kestrel/Host sẽ khởi động và in ra URL (ví dụ `https://localhost:5001` và `http://localhost:5000`) hoặc theo cấu hình `Properties/launchSettings.json`.
+
+4. **(Tùy chọn) Publish cho production**:
+   ```powershell
+   dotnet publish -c Release -o ..\publish
+   ```
+
+Lưu ý:
+- Nếu backend cần connection string (DB), cấu hình trong `appsettings.json` / `appsettings.Development.json`. Kiểm tra và chỉnh trước khi chạy.
+- Nếu backend bị lỗi port hoặc binding, xem `Properties/launchSettings.json` để biết port mặc định.
+
+
+Phần C — Model Python (apimohinh/model)
+
+1. **Chuyển vào thư mục model**:
+   ```powershell
+   cd ..\..\apimohinh\model
+   ```
+
+2. **Tạo và kích hoạt virtual environment (PowerShell)**:
+   ```powershell
+   python -m venv .venv
+   .\.venv\Scripts\Activate.ps1
+   ```
+
+3. **Cài dependencies**:
+   - Tạo file `requirements.txt` (nếu chưa có) với tối thiểu:
+     ```text
+     pandas
+     prophet
+     openpyxl
+     ```
+   - Cài:
+     ```powershell
+     pip install --upgrade pip
+     pip install -r requirements.txt
+     ```
+
+   Lưu ý về `prophet` trên Windows: đôi khi cần `cmdstanpy` hoặc Visual C++ Build Tools; nếu `pip install prophet` báo lỗi, đọc thông báo lỗi và cân nhắc cài `cmdstanpy` theo tài liệu `prophet`.
+
+4. **Chuẩn bị dữ liệu**:
+   - Đặt file Excel theo cấu trúc script mong đợi trong `data/` (đường dẫn mặc định trong script: `data/TongHop_30Truong_ToanQuoc_2025_XuHuong.xlsx`).
+
+5. **Chạy script**:
+   ```powershell
+   python .\train_prophet.py
+   ```
+   Kết quả mong đợi: file JSON dự báo được ghi tại `output/forecast_result.json` (theo biến `output_dir` trong script).
+
+6. **Deactive venv**:
+   ```powershell
+   deactivate
+   ```
+
+Lưu ý:
+- Script `train_prophet.py` yêu cầu ít nhất 2 mốc thời gian; nếu dữ liệu chỉ có 1 cột năm (ví dụ chỉ 2025) script sẽ abort.
+- Nếu cần cài đặt cụ thể cho `prophet`, cân nhắc dùng `pip install prophet==<phiên-bản-đã-kiểm-chứng>` hoặc tham khảo tài liệu của prophet.
+
+---
 #### Bước 3: Copy mã nguồn
-1. **Copy source code**: Sao chép nội dung code vào từng file tương ứng đã tạo.
+1. **Tạo project theo cấu trúc** (nếu bạn đang bắt đầu từ scratch): sao chép toàn bộ cây thư mục repo `Career-trends` vào workspace.
 
-2. **Organize imports**: Sử dụng **Ctrl+Shift+O** để tự động import các thư viện cần thiết.
+2. **Kiểm tra các file cấu hình**:
+   - Frontend: `Fontend/webapp/package.json`, `vite.config.ts`, `tsconfig.json`.
+   - Backend: `API/apixh/apixh.csproj`, `appsettings.json`, `Properties/launchSettings.json` — chỉnh connection string và ports nếu cần.
+   - Model: `apimohinh/model/train_prophet.py` và file dữ liệu trong `apimohinh/model/data/`.
 
-3. **Kiểm tra lỗi**: Đảm bảo không có lỗi compile trong Project Explorer.
+3. **Thiết lập biến môi trường (nếu cần)**:
+   - Ví dụ cho backend: `ASPNETCORE_ENVIRONMENT=Development` (PowerShell):
+     ```powershell
+     $env:ASPNETCORE_ENVIRONMENT = "Development"
+     dotnet run --project .\apixh.csproj
+     ```
 
+---
 #### Bước 4: Chạy ứng dụng
 
-**Khởi động Server:**
-1. **Right-click** file `TCPFileServer.java`
-2. **Run As** → **Java Application**
-3. Server sẽ khởi động trên port **12345** mặc định
-4. Console hiển thị:
-   ```
-   Server đã khởi động trên port 12345
-   Đang chờ client kết nối...
+**Khởi chạy Backend (.NET)**
+1. `cd API\apixh`
+2. `dotnet run --project .\apixh.csproj`
+3. Console sẽ hiển thị URL hosting (ví dụ):
+   ```text
+   Now listening on: https://localhost:5001
+   Now listening on: http://localhost:5000
+   Application started. Press Ctrl+C to shut down.
    ```
 
-**Khởi động Client:**
-1. **Right-click** file `ClientGUI.java`
-2. **Run As** → **Java Application**  
-3. Giao diện GUI sẽ xuất hiện
-4. Click nút **"Kết Nối"** để kết nối đến Server
-5. Status sẽ chuyển thành **"Đã kết nối"** (*màu xanh*)
-6. Server console sẽ hiển thị: `Client đã kết nối: /127.0.0.1`
+**Khởi chạy Frontend (Vite)**
+1. `cd Fontend\webapp`
+2. `npm run dev`
+3. Console Vite hiển thị URL dev (ví dụ): `Local: http://localhost:5173` — mở trình duyệt truy cập.
+
+**Chạy Model Python (dự báo)**
+1. `cd apimohinh\model`
+2. `./.venv/Scripts/Activate.ps1`
+3. `python train_prophet.py`
+4. Script tạo `output/forecast_result.json` nếu thành công.
 
 ---
 
 
 ## 📌 5. Liên hệ 
-- **Sinh viên thực hiện:** **Nguyễn Xuân Thuận**
+- **Sinh viên thực hiện:** **Nguyễn Xuân Thuận**, **Lê Đức Mạnh**
  - 🌐 Website: [FIT DNU](https://dainam.edu.vn/vi/khoa-cong-nghe-thong-tin)
  - 📧 Email: [xuanthuan611@gmail.com](mailto:xuanthuan611@gmail.com)
  - 📱 Fanpage: [AIoTLab - FIT DNU](https://www.facebook.com/DNUAIoTLab)
